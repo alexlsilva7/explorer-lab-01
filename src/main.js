@@ -41,7 +41,7 @@ const expirationDatePattern = {
     },
   },
 }
-expirationDateMask = IMask(expirationDate, expirationDatePattern)
+const expirationDateMask = IMask(expirationDate, expirationDatePattern)
 
 const cardNumber = document.querySelector("#card-number")
 const cardNumberPattern = {
@@ -72,3 +72,14 @@ const cardNumberPattern = {
   },
 }
 const cardNumberMask = IMask(cardNumber, cardNumberPattern)
+
+//Aula 03
+const addButton = document.querySelector("#add-card")
+addButton.addEventListener("click",()=>{
+  console.log('clique no botão')
+})
+
+//Previne o comportamento padrão do formulário
+document.querySelector("form").addEventListener("submit", (e) => {
+  e.preventDefault()
+})
