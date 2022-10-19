@@ -1,4 +1,5 @@
 import "./css/index.css"
+import IMask from "imask"
 //Aula 01
 const ccBgColor01 = document.querySelector(".cc-bg svg > g g:nth-child(1) path")
 const ccBgColor02 = document.querySelector(".cc-bg svg > g g:nth-child(2) path")
@@ -16,3 +17,10 @@ function setCardType(type) {
 }
 //add to global scope to be able to use it in the console
 globalThis.setCardType = setCardType
+
+//Aula 02
+const securityCode = document.querySelector("#security-code")
+const securityCodePattern = {
+  mask: "0000",
+}
+const securityCodeMask = IMask(securityCode, securityCodePattern)
