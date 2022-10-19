@@ -71,3 +71,4 @@ const cardNumberPattern = {
     return foundMask
   },
 }
+const cardNumberMask = IMask(cardNumber, cardNumberPattern)
