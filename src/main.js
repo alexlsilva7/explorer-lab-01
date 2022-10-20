@@ -75,11 +75,18 @@ const cardNumberMask = IMask(cardNumber, cardNumberPattern)
 
 //Aula 03
 const addButton = document.querySelector("#add-card")
-addButton.addEventListener("click",()=>{
+addButton.addEventListener("click", () => {
   console.log('clique no botão')
 })
 
 //Previne o comportamento padrão do formulário
 document.querySelector("form").addEventListener("submit", (e) => {
   e.preventDefault()
+})
+
+const cardHolder = document.querySelector("#card-holder")
+cardHolder.addEventListener("input", () => {
+  const ccHolder = document.querySelector(".cc-holder .value")
+
+  ccHolder.innerText = cardHolder.value.length > 0 ? cardHolder.value : "FULANO DA SILVA"
 })
