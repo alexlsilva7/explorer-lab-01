@@ -76,7 +76,7 @@ const cardNumberMask = IMask(cardNumber, cardNumberPattern)
 //Aula 03
 const addButton = document.querySelector("#add-card")
 addButton.addEventListener("click", () => {
-  console.log("clique no botão")
+  alert("Cartão Adicionado!")
 })
 
 //Previne o comportamento padrão do formulário
